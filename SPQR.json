@@ -1,0 +1,3387 @@
+{
+  "gameSystem": {
+    "name": "SPQR",
+    "id": "2008-3a5f-3b8b-1512",
+    "battleScribeVersion": 2.03,
+    "revision": 2,
+    "type": "gameSystem",
+    "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
+    "categoryEntries": [
+      {"name": "Athens", "id": "cdc1-be2e-8302-54a0", "hidden": false, "page": 56, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Britain", "id": "d9e9-3245-770c-5732", "hidden": false, "page": 67, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Caesar's Legions", "id": "52ee-e3d6-9000-9288", "hidden": false, "page": 78, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Dacia & Sarmatia", "id": "9c28-68c3-2957-e54a", "hidden": false, "page": 90, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Gaul", "id": "c7a8-a414-36d8-d098", "hidden": false, "page": 102, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Germania", "id": "2233-b686-1eb2-83d0", "hidden": false, "page": 114, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Iberia", "id": "7b00-92ef-01e0-8bf2", "hidden": false, "page": 124, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Imperial Rome", "id": "1b62-1454-877a-78d6", "hidden": false, "page": 133, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Macedonia", "id": "b246-5767-d033-5928", "hidden": false, "page": 145, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Persia", "id": "36f6-c439-4034-e3eb", "hidden": false, "page": 159, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Sparta", "id": "bd22-14f6-0196-02cc", "hidden": false, "page": 170, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Thebes", "id": "b62d-87e7-f743-79b4", "hidden": false, "page": 181, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Mercenaries", "id": "92fc-9dd3-fb32-08c7", "hidden": false, "page": 191, "publicationId": "887f-d8b5-542d-3740"},
+      {"name": "Infantry", "id": "cca0-3936-78fa-de5d", "hidden": false},
+      {"name": "Cavalry", "id": "3c73-901d-00b6-87ff", "hidden": false},
+      {"name": "Heroes", "id": "1225-ebcd-1580-d41b", "hidden": false},
+      {"name": "Heroes of Legend", "id": "471f-9b4a-99a5-dd09", "hidden": false},
+      {"name": "War Machines", "id": "2669-68e0-fa63-b55b", "hidden": false},
+      {"name": "Rules", "id": "acf7-3f33-cbde-086b", "hidden": false}
+    ],
+    "costTypes": [{"name": "Denarii", "id": "5c36-dd73-6e2a-860d", "defaultCostLimit": -1}],
+    "forceEntries": [
+      {
+        "name": "Warband",
+        "id": "9b28-77cd-c66f-72e9",
+        "hidden": false,
+        "categoryLinks": [
+          {"name": "Cavalry", "id": "6b19-f849-1af8-222f", "hidden": false, "primary": false, "targetId": "3c73-901d-00b6-87ff"},
+          {"name": "Heroes", "id": "2844-04da-dac5-f907", "hidden": false, "primary": false, "targetId": "1225-ebcd-1580-d41b"},
+          {"name": "Heroes of Legend", "id": "c89d-8366-5bae-3b3f", "hidden": false, "primary": false, "targetId": "471f-9b4a-99a5-dd09"},
+          {"name": "Infantry", "id": "1774-e9a9-5766-a834", "hidden": false, "primary": false, "targetId": "cca0-3936-78fa-de5d"},
+          {"name": "War Machines", "id": "06f6-491b-5a91-4fdb", "hidden": false, "primary": false, "targetId": "2669-68e0-fa63-b55b"},
+          {"name": "Rules", "id": "4150-3693-0e65-ee76", "hidden": false, "primary": false, "targetId": "acf7-3f33-cbde-086b"}
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Model",
+        "id": "64c7-d252-0ded-e57d",
+        "characteristicTypes": [
+          {"name": "Type", "id": "e9aa-056b-7d55-670a"},
+          {"name": "Move", "id": "5fd1-7b9c-b935-b627"},
+          {"name": "Ranged", "id": "5c8c-9801-1fbc-108d"},
+          {"name": "Melee", "id": "e6f2-beb9-61a7-f25d"},
+          {"name": "Melee Dice", "id": "f537-50b3-b4ea-a802"},
+          {"name": "Agility", "id": "321d-73c5-979f-f323"},
+          {"name": "Bravery", "id": "6766-8961-8b6e-8bdf"},
+          {"name": "Armour", "id": "ddaf-ef77-12e6-5524"},
+          {"name": "Wounds", "id": "df1b-aba3-f893-efe8"}
+        ]
+      },
+      {"name": "Close Combat Weapons", "id": "f537-0eef-f915-3b9e", "characteristicTypes": [{"name": "Special Rules", "id": "243e-15cc-fa49-5170"}]},
+      {
+        "name": "Ranged Weapons",
+        "id": "d984-3131-b7d0-b690",
+        "characteristicTypes": [{"name": "Range", "id": "119f-f404-c3fe-8a38"}, {"name": "Special Rules", "id": "af70-a0ad-1850-3e47"}]
+      },
+      {
+        "name": "Armour",
+        "id": "2d5f-a4fe-9d23-2a50",
+        "characteristicTypes": [{"name": "Move", "id": "f22d-18e9-d8f9-f04f"}, {"name": "Armour", "id": "5d30-bc14-5596-f8d3"}, {"name": "Special Rules", "id": "64c3-2785-2122-f220"}]
+      },
+      {"name": "Equipment", "id": "7a78-7787-9971-c51f", "characteristicTypes": [{"name": "Rules", "id": "2b7d-881c-2bd9-330d"}]}
+    ],
+    "publications": [{"name": "SPQR", "id": "887f-d8b5-542d-3740"}],
+    "sharedRules": [
+      {
+        "name": "Lethal",
+        "id": "cc1c-7236-9ec8-f0d3",
+        "description": "This weapon is truly terrible. The Lethal score is used as a penalty to an opponent’s Armour checks and is also the number of Wounds removed from a unit upon a successful strike – however, a Lethal weapon cannot remove more than one model from a single successful attack unless it is being wielded by a Hero.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Inaccurate",
+        "id": "6a70-38cc-c88c-6d69",
+        "description": "This weapon is either shoddily built or almost impossible to aim properly. Whenever using this weapon, re-roll any successful Ranged or Melee check.",
+        "hidden": false
+      },
+      {
+        "name": "Long",
+        "id": "60c1-72e3-ea47-6398",
+        "description": "Weapons with reach, such as spears, allow their wielder to keep attackers at bay and strike almost with impunity. A unit using a Long weapon gains a +1 bonus to its Melee checks when fighting an enemy who does not also use a Long or Very Long weapon. A Long weapon may not be used in dual weapon fighting.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "One Shot",
+        "id": "fe92-7a06-27c3-00b8",
+        "description": "This is a single weapon, such as a javelin, that once thrown cannot be used again. Only one attack may be performed with a One Shot weapon in each battle.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Parry",
+        "id": "3a35-bbbd-1ac1-b06a",
+        "description": "This weapon is well suited for knocking aside an enemy’s attacks. You may force your opponent to reroll one of his Melee checks for every model in the unit that has this special rule. If a number follows the term Parry, this is how many Melee checks an opponent may be forced to re-roll. A unit with numerous weapons and/or Talents that grant the Parry rule may use all of them in a close combat, potentially re-rolling several (or all!) of its opponent’s Melee checks.\n\nSome equipment, such as shields, also allow you to Parry ranged attacks as well.\n\nRemember, you cannot re-roll a re-roll, so if a unit has more Parries than an enemy has attacks, the remainder cannot be used.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Short",
+        "id": "ee51-9b63-2900-3d8f",
+        "description": "Weapons without reach, such as daggers and knives, grant a great advantage to an enemy, allowing them to strike first while keeping the wielder at bay. A unit using a Short weapon suffers a -1 penalty to its Melee checks when fighting an enemy who does not also use a Short weapon.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Slow",
+        "id": "1d24-fae0-32f0-5db9",
+        "description": "Some weapons are difficult to use or require reloading after every shot. Before a Shoot action is performed to use this weapon, a Special action must be taken immediately beforehand.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Smasher",
+        "id": "9994-6c6c-bcfc-abc6",
+        "description": "This weapon is so heavy and brutal when swung with force that it is impossible to stop. A Smasher weapon cannot be Parried by any means.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Two-Handed",
+        "id": "3f98-61e4-0e4a-4f2c",
+        "description": "This weapon requires two hands to properly wield and so may not be used with a shield or second weapon, nor may it be used for dual weapon fighting.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Very Long",
+        "id": "2f02-e5cd-cf07-770f",
+        "description": "Weapons with extended reach, such as pikes, allow their wielder to keep even spearmen at bay while in battle. A unit using a Very Long weapon gains a +1 bonus to its Melee checks when fighting an enemy who does not also use a Very Long weapon. However, if the enemy wins a round of close combat, the Very Long weapon may not be used for the rest of the combat. A Very Long weapon may not be used in dual weapon fighting.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Weak",
+        "id": "ee14-1741-605b-14d8",
+        "description": "This weapon is decidedly blunt or delivered with little force, making it easily foiled by armour, or even thick clothing. Units struck by this weapon gain a +1 bonus to their Armour checks against its attacks.",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {
+        "name": "Hit and Run",
+        "id": "3416-54d9-06e1-992c",
+        "description": "If an enemy performs a Melee action to get into close combat, the Hit and Run unit may attempt to flee. As soon as the Melee action is declared, the Hit and Run unit may make a Bravery check. If successful, it immediately performs a free Move action. The enemy unit then completes its Melee action (though it will now likely find itself out of range).\n\nA Hit and Run unit may only perform this free Move action once every Turn but may attempt the Bravery check to do it multiple times.",
+        "hidden": false,
+        "page": 17,
+        "publicationId": "887f-d8b5-542d-3740"
+      },
+      {"name": "Phalanx", "id": "df45-8aa5-f202-c313", "hidden": false},
+      {
+        "name": "Trained Archers",
+        "id": "d121-5153-7fd5-6755",
+        "description": "The archers of Athens had better training than most Greeks with the Bow. They do not suffer from the Mediocre Archery rule. However, an Athenian warband may never have more units of Archers than it hasunits of Hoplites.",
+        "hidden": false
+      },
+      {
+        "name": "Blight",
+        "id": "ceb7-ab38-87ba-6117",
+        "description": "Before a battle begins, the British player make select any one Hero in the enemy warband. That Hero will suffer a -1 penalty to any characteristic of the British player’s choosing for the rest of the battle.",
+        "hidden": false
+      },
+      {
+        "name": "Druidic Presence",
+        "id": "5341-396e-9f25-19e8",
+        "description": "A Druid may not be challenged by an enemy Hero (though he is free to issue his own challenge). In addition, any unit the Druid leads may re-roll any of its own Melee Dice in close combat.",
+        "hidden": false
+      },
+      {
+        "name": "Battle Platform",
+        "id": "ba03-3058-8c6e-7086",
+        "description": "A Hero may start the battle on board a Chariot, effectively becoming one unit. While the Hero is mounted, the unit uses the Chariot’s characteristics for movement, close combat and being attacked by ranged weapons, but the Hero performs his own actions, may use any Talents, and the Chariot uses his Bravery score.\nIf the Chariot is attacked in any way, any damage caused is deducted from the Chariot’s Wounds. If the Chariot is destroyed, roll a dice; the Hero loses this many Wounds. If he still has Wounds remaining, the Hero is placed on the table within 3\" of the Chariot’s last position. The Hero may leave the Chariot at any time simply by performing a Move or Melee action, and may board it again the same way. However, the Chariot may not perform more than one Move or Melee action in any Turn in which he leaves or boards it.",
+        "hidden": false
+      },
+      {
+        "name": "Property of a Hero",
+        "id": "da1f-2fca-66a9-3aa7",
+        "description": "A Chariot must be assigned to a specific Hero (not a Druid) before the battle starts, and each Hero may only have one Chariot. If a Chariot cannot be given to a Hero, it may not be used. During the battle, no other model may use the Chariot except the Hero it was assigned to.",
+        "hidden": false
+      },
+      {
+        "name": "Dog Handlers",
+        "id": "0cf8-e12d-ef44-6b80",
+        "description": "This unit must have at least one Tribesman Dog Handler for every four Hounds or part thereof at the start of a battle, and may not have more Tribesmen Dog Handlers than Hounds.",
+        "hidden": false
+      },
+      {
+        "name": "Let Slip the Dogs of War",
+        "id": "e133-f55f-e03e-d515",
+        "description": "So long as at least one Hound remains in the unit, Hunting Dogs increase their Move to 10\"\nwhen performing a Melee action.",
+        "hidden": false
+      },
+      {
+        "name": "Skyclad",
+        "id": "70f1-e570-840a-f45b",
+        "description": "If this unit does not take any armour other than a Large Shield and their models are wearing no clothing at all, they gain a +1 bonus to Melee checks.",
+        "hidden": false
+      },
+      {
+        "name": "Strength in Numbers",
+        "id": "2f53-e419-6ce5-76ed",
+        "description": "This unit gains much of its courage from its numbers. If the unit has 10 or more models, it gains a +1 bonus to Bravery checks. If it numbers 20 or more models, it gains a +2 bonus to Bravery checks.",
+        "hidden": false
+      },
+      {
+        "name": "Wild Charge",
+        "id": "7239-74fa-2329-8795",
+        "description": "When this unit charges it gains a bonus Melee Dice for each model in the unit, regardless of whether they get into contact with an enemy model.",
+        "hidden": false
+      },
+      {
+        "name": "Hero of Rome",
+        "id": "d9a4-2209-c00a-078f",
+        "description": "Every time the Hero receives a bonus characteristic from going up a Level, roll a dice. On a 1, he increases no characteristic at all! On a 5 or 6, however, he may increase two characteristics by +1.",
+        "hidden": false
+      },
+      {
+        "name": "Shield Wall",
+        "id": "2c39-8c21-b39b-ab87",
+        "description": "If all the models in this unit are in base contact with one another and the unit numbers at least ten models, they gain a bonus Parry.",
+        "hidden": false
+      },
+      {
+        "name": "Testudo",
+        "id": "10e2-60d7-2ce4-1ef8",
+        "description": "To form a Testudo, all members of the unit must be in contact with one another and must number at least ten models. Then, the unit must perform a Special action. From this point, the unit’s Move is halved but it may re-roll all Armour checks made to defend against ranged attacks.\nA Testudo is disbanded immediately by the unit performing a Melee action or any model in the unit being out of contact with at least two other models in the same unit. This may be done as a Move action on the part of the player or by his opponent causing casualties.",
+        "hidden": false
+      },
+      {
+        "name": "Falx",
+        "id": "ce0a-a266-7915-5d31",
+        "description": "A Two-handed Sword carried by Dacian Heroes will actually be a falx, a long blade with a pronounced curve that allowed it to slice past shields. An enemy with a shield will lose one Parry when this Hero carries a Two-handed Sword and performs a Melee action against them.",
+        "hidden": false
+      },
+      {
+        "name": "Kontos",
+        "id": "904d-b6aa-1ddf-06f7",
+        "description": "When this unit charges, their Long Spears gain the Lethal 3 special rule for the duration of that Melee action, rather than the normal Lethal 2.",
+        "hidden": false
+      },
+      {
+        "name": "German Wives",
+        "id": "aa53-33e9-d2dd-ace7",
+        "description": "German Wives add to the number of models in the unit, but only grant bonuses in respect to Melee Dice and Bravery. They are always the first to be removed as casualties (likely running away when the enemy get too close rather than actually being cut down).",
+        "hidden": false
+      },
+      {
+        "name": "Flaming Javelins",
+        "id": "56ed-b635-e13a-836e",
+        "description": "This unit may ignite bundles of grass tied to their javelins before throwing them as part of a normal Shoot action. If the target is using the Phalanx or Shield Wall special rules, it must make a Bravery check after all other effects of the attack have been resolved. If this check is failed, the enemy unit will lost the benefit of the Phalanx or Shield Wall rule for the rest of the Turn.",
+        "hidden": false
+      },
+      {
+        "name": "Infiltrators",
+        "id": "2abb-ca52-df27-53d8",
+        "description": "When all forces have been deployed but before the first turn begins, this unit that has not purchased Linothoraxes or Cuirasses may perform two Move actions.",
+        "hidden": false
+      },
+      {
+        "name": "Flight of Cranes",
+        "id": "0cee-4ba0-713e-78d0",
+        "description": "If this unit charges an enemy unit and inflict more casualties than they suffer in that action, they may perform an immediate and free Move or Melee action without fleeing from combat. Simply move them out of contact with any remaining enemy.",
+        "hidden": false
+      },
+      {
+        "name": "Big But Cowardly",
+        "id": "0c5d-5630-65ef-69b8",
+        "description": "If a War Elephant loses a quarter or more of its remaining Wounds in a single Turn, it must make a Bravery check.\nIf it fails, it must perform two Move actions in its next Phase, moving directly away from the unit that caused the loss of these Wounds as far as possible, fleeing combat if necessary. If this movement takes the War Elephant into contact with another unit (including a friendly unit!) this will count as a Melee action and a charge!\nAt the end of its next Phase, the War Elephant must make another Bravery check. If this is successful, it will act normally. If not, it will carry on moving away from the last unit that caused it to lose Wounds, taking another Bravery check in its next Phase. If the War Elephant has been moved into close combat, it will not take this Bravery check until it has defeated the unit it is fighting (unless it loses a quarter or more of its remaining Wounds in a single Turn, when the whole process starts again).",
+        "hidden": false
+      },
+      {
+        "name": "Terror Weapon",
+        "id": "1840-0c76-81b9-8a3b",
+        "description": "Any unit charged by a War Elephant must make an immediate Will to Fight check. A Cavalry unit charged by a War Elephant must re-roll this check if it passes the first time, unless it is also a War Elephant.",
+        "hidden": false
+      },
+      {
+        "name": "Turret",
+        "id": "c007-15e3-05b5-480c",
+        "description": "A War Elephant equipped with a Turret has a handful of warriors riding it, equipped with bows and javelins which they use to rain missiles down upon enemies. So long as the War Elephant is not in close combat, it gains a free Shoot action every Phase, during which it can make two attacks with either Bows or Javelins. It carries enough Javelins to last the entire battle.",
+        "hidden": false
+      },
+      {
+        "name": "Put to the Test",
+        "id": "ecc8-98dc-e7b1-d2c2",
+        "description": "At the end of a battle, after all casualties have been determined, any Immortals that have been permanently killed will be automatically replaced by any surviving Levies in the warband on a one-for-one basis. This may not take the Immortals unit above its original size at the start of the previous battle.",
+        "hidden": false
+      },
+      {
+        "name": "Spara",
+        "id": "a62b-fba0-db8b-16d8",
+        "description": "Spara were large wicker shields that Levies often carried to create temporary strongpoints on the battlefield. They are treated as Large Shields but if the unit is not involved in close combat and performs two consecutive Special actions the Spara can instead be used as a makeshift barricade. The unit will benefit from Heavy Cover against all ranged attacks and as being in cover from enemies moving into close combat. These benefits are lost as soon as the Levy unit moves or after the first round of close combat.",
+        "hidden": false
+      },
+      {"name": "For Sparta!", "id": "95cc-64a4-6364-efe4", "description": "This unit may re-roll all failed Will to Fight checks.", "hidden": false},
+      {
+        "name": "Rebellious",
+        "id": "23d1-8035-c74b-74ba",
+        "description": "If this unit is ever more than 12\" away from a Spartan Hoplite or Hero at the end of a Turn or is within Line of Sight of a Spartan Hero removed as a casualty, it must make a Bravery check.\nIf it succeeds, the whole unit is immediately removed as a casualty as it flees the battlefield!\nIn addition, Helots that leave the battlefield due to a failed Will to Fight check in a campaign are treated as though they were casualties. The Spartan player must roll for each Helot as though they were injured to see if they return to his warband!",
+        "hidden": false
+      },
+      {
+        "name": "Passionate Bond",
+        "id": "cf62-bf1b-f01a-ad38",
+        "description": "If one member of the Sacred Band is removed as a casualty within Line of Sight of the other, the survivor will become Blood Drunk, as described on page 46.",
+        "hidden": false
+      },
+      {
+        "name": "Sacred Vow",
+        "id": "3af0-1473-fc01-2aa9",
+        "description": "A Sacred Band is always bought as a pair, at a base cost of 100 Denarii for one Eromenos and one Erastes. Options may be purchased for either one or both members of the Sacred Band, with the cost being doubled if chosen for both.",
+        "hidden": false
+      },
+      {
+        "name": "Deadly Accurate",
+        "id": "4804-388e-0058-c3be",
+        "description": "A Balearic Slinger unit may re-roll any ranged attack made with a sling that misses its target.",
+        "hidden": false
+      },
+      {
+        "name": "Cretan Archer",
+        "id": "65f6-ef91-c3d1-e1da",
+        "description": "Cretan Archers were known to cause disruption in camps, stealing items and offering to ‘protect’ the belongings of other soldiers. When used as Mercenaries, Cretan Archers will steal an additional 10% of their value from the Denarii you receive from the battle, for a total of 20%.",
+        "hidden": false
+      },
+      {
+        "name": "Battle Cry",
+        "id": "cbab-94ea-7875-4972",
+        "description": "When a Gaesatae unit charges an enemy that it outnumbers, the enemy must succeed in a Bravery check or immediately perform a Move action away from the Gaesatae. This will count as fleeing from close combat (see page 13). Enemy Heroes or units led by Heroes are immune to the Battle Cry.",
+        "hidden": false
+      },
+      {
+        "name": "Poisoned Spears",
+        "id": "f378-cccc-3ddc-609e",
+        "description": "A Gaesatos that takes the Poisoned Spear option will gain the Lethal 2 rule for all his close combat attacks.",
+        "hidden": false
+      },
+      {
+        "name": "Parthian Shot",
+        "id": "2afe-5308-ccaa-a007",
+        "description": "After successfully using the Hit and Run rule, Parthian Horse Archers may immediately perform two free Shoot actions.",
+        "hidden": false
+      },
+      {
+        "name": "No Equal on Horseback",
+        "id": "0435-4726-63f7-e924",
+        "description": "When fighting against an enemy with the Cavalry type in close combat, Numidian Cavalrymen may re-roll any of their own Melee Dice.",
+        "hidden": false
+      },
+      {
+        "name": "Finest Horsemen",
+        "id": "aa6f-7065-6310-ebea",
+        "description": "Thessalian Cavalrymen may double their Move score for one action in every Phase as normal. However, if they pass a Bravery check, they may double their Move score for a second action.",
+        "hidden": false
+      },
+      {
+        "name": "The Original Model",
+        "id": "9afc-e612-d53e-f36b",
+        "description": "When successfully performing a Move action for a Hit and Run, Thracian Peltasts may first perform an immediate and free Shoot action with Javelins at the enemy unit that attacked them. After this Shoot action has been performed, they take a Move action as normal.",
+        "hidden": false
+      },
+      {
+        "name": "Rhomphaia",
+        "id": "a675-7972-3d38-5ee9",
+        "description": "The blades used by the Thracians were not simple swords. Instead, they were mounted upon a short pole which imparted considerable momentum when swung. All close combat attacks made by Thracian Warriors gain the Lethal 1 rule.",
+        "hidden": false
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Axe",
+        "id": "828e-5cc3-f4f9-9a61",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Lethal", "id": "daa4-6eb3-6fce-62cf", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Axe",
+            "id": "53d4-c5e1-1ce9-b4d2",
+            "hidden": false,
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Lethal 1", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Club",
+        "id": "1286-e44d-2426-efdc",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Smasher", "id": "b3f3-8e1a-cc4b-c1f7", "hidden": false, "targetId": "9994-6c6c-bcfc-abc6", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Club",
+            "id": "ba1d-ca59-5887-f642",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Smasher", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Dagger",
+        "id": "e755-87d2-d778-0059",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Short", "id": "dcbf-d425-8207-a02b", "hidden": false, "targetId": "ee51-9b63-2900-3d8f", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Dagger",
+            "id": "1f49-4c3b-1544-e7e3",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Short", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Fists & Feet",
+        "id": "2017-61cb-604b-8688",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [
+          {"name": "Weak", "id": "3d62-3a7a-bb3b-51c1", "hidden": false, "targetId": "ee14-1741-605b-14d8", "type": "rule"},
+          {"name": "Short", "id": "3a51-2a8d-ef63-f87a", "hidden": false, "targetId": "ee51-9b63-2900-3d8f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Fists & Feet",
+            "id": "f83f-90de-a7c0-0cbf",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Short, Weak", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Great Axe",
+        "id": "6ff0-0cad-f0b9-1cd2",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [
+          {"name": "Lethal", "id": "7b0c-b422-4221-ace4", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"},
+          {"name": "Smasher", "id": "61d4-439b-63f7-b6c4", "hidden": false, "targetId": "9994-6c6c-bcfc-abc6", "type": "rule"},
+          {"name": "Two-Handed", "id": "798f-ed4b-d472-3df2", "hidden": false, "targetId": "3f98-61e4-0e4a-4f2c", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Great Axe",
+            "id": "6a20-f396-7127-b521",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Lethal 2, Smasher, Two-Handed", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Large Club",
+        "id": "3669-94c0-71a2-2c45",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [
+          {"name": "Lethal", "id": "3fb5-f070-9911-d64c", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"},
+          {"name": "Smasher", "id": "caaf-b2d6-40b9-f05e", "hidden": false, "targetId": "9994-6c6c-bcfc-abc6", "type": "rule"},
+          {"name": "Two-Handed", "id": "3e71-dd67-80ff-bfda", "hidden": false, "targetId": "3f98-61e4-0e4a-4f2c", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Large Club",
+            "id": "ee18-2dcc-f8e1-f8f8",
+            "hidden": false,
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Lethal 1, Smasher, Two-Handed", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Long Spear",
+        "id": "7157-0243-bbac-15e4",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Long", "id": "a43c-07b8-d6dc-0393", "hidden": false, "targetId": "60c1-72e3-ea47-6398", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Long Spear",
+            "id": "ff59-a915-40d8-fdd0",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Long", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Pike",
+        "id": "e3cd-56b3-f0a1-2516",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Very Long", "id": "a97b-b694-c421-b93b", "hidden": false, "targetId": "2f02-e5cd-cf07-770f", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Pike",
+            "id": "b984-2b30-1213-5f6d",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Very Long", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Short Spear",
+        "id": "2bf1-3aa5-2811-17eb",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Short Spear",
+            "id": "a3fb-2885-10ac-6fbb",
+            "hidden": false,
+            "page": "Short Spear",
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Sword",
+        "id": "ced3-c4d0-55de-b57c",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Parry", "id": "810b-8f2d-2481-8395", "hidden": false, "targetId": "3a35-bbbd-1ac1-b06a", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Sword",
+            "id": "5c67-5456-6036-c63e",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Parry", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Two-handed Sword",
+        "id": "3460-b3d3-9faa-1483",
+        "collective": false,
+        "hidden": false,
+        "page": 24,
+        "publicationId": "887f-d8b5-542d-3740",
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [
+          {"name": "Lethal", "id": "3afd-21c5-8995-f4c9", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"},
+          {"name": "Parry", "id": "a111-1ed8-aa8c-a5af", "hidden": false, "targetId": "3a35-bbbd-1ac1-b06a", "type": "rule"},
+          {"name": "Two-Handed", "id": "db9b-c1cd-a9a5-97e9", "hidden": false, "targetId": "3f98-61e4-0e4a-4f2c", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Two-Handed Sword",
+            "id": "380a-25ac-7794-6208",
+            "hidden": false,
+            "page": 24,
+            "publicationId": "887f-d8b5-542d-3740",
+            "typeId": "f537-0eef-f915-3b9e",
+            "typeName": "Close Combat Weapons",
+            "characteristics": [{"name": "Special Rules", "$text": "Lethal 1, Parry, Two-handed", "typeId": "243e-15cc-fa49-5170"}]
+          }
+        ]
+      },
+      {
+        "name": "Bow",
+        "id": "642e-934f-35b8-8da4",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "profiles": [
+          {
+            "name": "Bow",
+            "id": "6f8f-7d2c-b89f-5c6c",
+            "hidden": false,
+            "typeId": "d984-3131-b7d0-b690",
+            "typeName": "Ranged Weapons",
+            "characteristics": [{"name": "Range", "$text": "20\"", "typeId": "119f-f404-c3fe-8a38"}, {"name": "Special Rules", "$text": "-", "typeId": "af70-a0ad-1850-3e47"}]
+          }
+        ]
+      },
+      {
+        "name": "Javelin",
+        "id": "49a7-73c5-ab41-788a",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [
+          {"name": "Lethal", "id": "1fce-dd0d-dbba-33b1", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"},
+          {"name": "One Shot", "id": "df96-a0e4-0542-e79a", "hidden": false, "targetId": "fe92-7a06-27c3-00b8", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Javelin",
+            "id": "052b-00c2-9bae-ca5e",
+            "hidden": false,
+            "typeId": "d984-3131-b7d0-b690",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "10\"", "typeId": "119f-f404-c3fe-8a38"},
+              {"name": "Special Rules", "$text": "Lethal 2, One-Shot, Never suffer long range penalty", "typeId": "af70-a0ad-1850-3e47"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sling",
+        "id": "4484-45c9-9905-740a",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [
+          {"name": "Lethal", "id": "22d4-65c3-dd99-c736", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"},
+          {"name": "Slow", "id": "6d31-9bbd-368d-75cf", "hidden": false, "targetId": "1d24-fae0-32f0-5db9", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Sling",
+            "id": "4c6d-c7ca-90df-b2dc",
+            "hidden": false,
+            "typeId": "d984-3131-b7d0-b690",
+            "typeName": "Ranged Weapons",
+            "characteristics": [{"name": "Range", "$text": "30\"", "typeId": "119f-f404-c3fe-8a38"}, {"name": "Special Rules", "$text": "Lethal 1, Slow", "typeId": "af70-a0ad-1850-3e47"}]
+          }
+        ]
+      },
+      {
+        "name": "Stones",
+        "id": "ca6e-0315-1572-1130",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Stones",
+            "id": "7be6-5a38-1dcd-88df",
+            "hidden": false,
+            "typeId": "d984-3131-b7d0-b690",
+            "typeName": "Ranged Weapons",
+            "characteristics": [{"name": "Range", "$text": "10\"", "typeId": "119f-f404-c3fe-8a38"}, {"name": "Special Rules", "$text": "-", "typeId": "af70-a0ad-1850-3e47"}]
+          }
+        ]
+      },
+      {
+        "name": "Buckler",
+        "id": "ead4-51db-c04e-178d",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Buckler",
+            "id": "7b91-a695-527c-5d84",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "-", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Buckler",
+            "id": "38ce-70d2-0ef3-8ee4",
+            "description": "A buckler grants its carrier the Parry advanced rule (page 19) against close combat attacks only.",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "name": "Chainmail Shirt",
+        "id": "a1ab-bea8-9a51-fb15",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Chainmail Shirt",
+            "id": "918c-380c-d7d6-8b5b",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "-1", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+3", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cuirass",
+        "id": "a700-13dd-b838-b2e3",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Cuirass",
+            "id": "f4c2-eb56-a654-f074",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "-2", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+3", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Helmet",
+        "id": "b786-6558-76f2-7629",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Helmet",
+            "id": "825a-d725-8bf2-4ede",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+1", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Helmet",
+            "id": "6e0c-c874-0db6-92f1",
+            "description": "Note that a helmet cannot be combined with other types of armour except a shield (it is assumed other armour includes a helmet).",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "name": "Large Shield",
+        "id": "5d24-d6fe-34ae-f552",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Parry", "id": "922a-260d-da94-edfa", "hidden": false, "targetId": "3a35-bbbd-1ac1-b06a", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Large Shield",
+            "id": "2695-59c3-eb4b-18e8",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "-", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Large Shield",
+            "id": "1aca-3aa5-de82-8b2f",
+            "description": "A Large Shield grants its carrier the Parry 2 advanced rule (page 19) which may also be used against ranged attacks.\nIf a unit carrying Large Shields flees from close combat (see page 13), it must make a Bravery check. If it fails, it will drop and lose its shields.",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "name": "Leather Armour",
+        "id": "1723-8fca-033c-25cc",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Leather Armour",
+            "id": "e931-4b54-b432-4e1b",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+1", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Linothorax",
+        "id": "7f8f-ff5d-3901-a803",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Linothorax",
+            "id": "e2b6-823d-dc21-bbd7",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "-1", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+2", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lorica Segmentum",
+        "id": "0864-e209-4cf6-e9a0",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Lorica Segmentum",
+            "id": "482b-385b-fd83-b995",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+3", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Scale Armour",
+        "id": "c3a6-6b72-c2e4-5ad7",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Scale Armour",
+            "id": "968e-244a-d1ff-fda3",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+2", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Small Shield",
+        "id": "7d76-d042-b3d8-95ed",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "infoLinks": [{"name": "Parry", "id": "5800-1721-7d17-9795", "hidden": false, "targetId": "3a35-bbbd-1ac1-b06a", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Small Shield",
+            "id": "9ef7-c492-4559-357a",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Small Shield",
+            "id": "8202-8ab6-f138-d6d2",
+            "description": "A Small Shield grants its carrier the Parry advanced rule (page 19) which may also be used against ranged attacks.",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "name": "Barding",
+        "id": "1de0-d919-cfd9-24d5",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Barding",
+            "id": "4508-4d4a-4ab5-c508",
+            "hidden": false,
+            "typeId": "7a78-7787-9971-c51f",
+            "typeName": "Equipment",
+            "characteristics": [
+              {"name": "Rules", "$text": "A Cavalry model with barding adds an extra +1 to its Armour score but will reduce its Move by –1.", "typeId": "2b7d-881c-2bd9-330d"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Camel",
+        "id": "e731-920b-79b2-3b5f",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Camel",
+            "id": "d614-5295-7276-0b4b",
+            "hidden": false,
+            "typeId": "7a78-7787-9971-c51f",
+            "typeName": "Equipment",
+            "characteristics": [
+              {
+                "name": "Rules",
+                "$text": "A unit mounted on horses gains the following benefits.\n\nIt gains +1 Armour and +1 Hits. Unless a horse is bought as an option for a model, these increases will have already been factored into their characteristics.\n\nBoth Short Spears and Long Spears gain the Lethal 2 rule when charging. The normal Lethal bonus for charging is not added to this.\n\nArmour worn by the rider does not inflict a penalty to its Move score.\n\nThe unit changes its type from Infantry to Cavalry.\n\nWhen gaining the benefits from charging, a unit consisting solely of Cavalry models gains a +1 bonus to its Melee checks.\n\nThe unit may force horse-mounted enemy units it is in close combat with to re-roll all successful Melee checks.\n\nIf the camel unit charges a horse-mounted enemy unit, the enemy must make an immediate Will to Fight check.",
+                "typeId": "2b7d-881c-2bd9-330d"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Horn",
+        "id": "3ac3-c63a-ac96-47b5",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Horn",
+            "id": "ca3b-2e01-a4dd-4282",
+            "hidden": false,
+            "typeId": "7a78-7787-9971-c51f",
+            "typeName": "Equipment",
+            "characteristics": [
+              {
+                "name": "Rules",
+                "$text": "Once per battle, a unit that has at least one model with a horn may perform a third action in its Phase.",
+                "typeId": "2b7d-881c-2bd9-330d"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Horse",
+        "id": "6a35-f40a-f8fa-4bac",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Horse",
+            "id": "8370-5856-d3eb-9a86",
+            "hidden": false,
+            "typeId": "7a78-7787-9971-c51f",
+            "typeName": "Equipment",
+            "characteristics": [
+              {
+                "name": "Rules",
+                "$text": "A unit mounted on horses gains the following benefits.\n\nIt may double its Move score for one Move or Melee action in every Phase.\n\nIt gains +1 Armour and +1 Hits. Unless a horse is bought as an option for a model, these increases will have already been factored into their characteristics.\n\nBoth Short Spears and Long Spears gain the Lethal 2 rule when charging. The normal Lethal bonus for charging is not added to this.\n\nArmour worn by the rider does not inflict a penalty to its Move score.\n\nThe unit changes its type from Infantry to Cavalry.\n\nWhen gaining the benefits from charging, a unit consisting solely of Cavalry models gains a +1 bonus to its Melee checks.",
+                "typeId": "2b7d-881c-2bd9-330d"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pilum",
+        "id": "7083-57f9-d392-d6a0",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Pilum",
+            "id": "782e-0bdc-79f7-52ef",
+            "hidden": false,
+            "typeId": "7a78-7787-9971-c51f",
+            "typeName": "Equipment",
+            "characteristics": [
+              {
+                "name": "Rules",
+                "$text": "The Pila may only be used once in every battle by a unit not already engaged in close combat, against an enemy that is moving into close combat with it. The enemy will gain no bonus for charging and may not use any Small or Large Shield to Parry in the first Melee action of the close combat.",
+                "typeId": "2b7d-881c-2bd9-330d"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standard",
+        "id": "c28a-0ef5-e6ef-83a9",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Standard",
+            "id": "ec5e-2ab1-0faa-e16a",
+            "hidden": false,
+            "typeId": "7a78-7787-9971-c51f",
+            "typeName": "Equipment",
+            "characteristics": [{"name": "Rules", "$text": "Any unit within 12\" of a friendly standard may re-roll any failed Bravery check.", "typeId": "2b7d-881c-2bd9-330d"}]
+          }
+        ]
+      },
+      {
+        "name": "Animal Skin",
+        "id": "be8d-9791-0086-68f8",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Animal Skin",
+            "id": "b38c-5798-413d-1d04",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "+1", "typeId": "5d30-bc14-5596-f8d3"},
+              {"name": "Special Rules", "typeId": "64c3-2785-2122-f220"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Arrow Apron",
+        "id": "c9ed-9fc1-86e7-7712",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+        "profiles": [
+          {
+            "name": "Arrow Apron",
+            "id": "b941-5a6b-3ad3-515d",
+            "hidden": false,
+            "typeId": "2d5f-a4fe-9d23-2a50",
+            "typeName": "Armour",
+            "characteristics": [
+              {"name": "Move", "$text": "+0", "typeId": "f22d-18e9-d8f9-f04f"},
+              {"name": "Armour", "$text": "-", "typeId": "5d30-bc14-5596-f8d3"},
+              {
+                "name": "Special Rules",
+                "$text": "An Arrow Apron allows a model to re-roll any failed Armour check made against ranged attacks.",
+                "typeId": "64c3-2785-2122-f220"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Talents",
+        "id": "c2d3-3adf-619b-eadf",
+        "collective": false,
+        "hidden": false,
+        "selectionEntryGroups": [
+          {
+            "name": "Archer of Legend",
+            "id": "f2ac-8042-2777-6c4d",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Eye of The Hawk",
+                "id": "4724-63f9-5fb6-8cdc",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "e87c-b9bf-5e05-aa2d",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Eye of The Hawk",
+                    "id": "489e-9679-0405-cd7a",
+                    "description": "Use: Special (Shoot)\nPrerequisite: Ranged +2 or higher\nThis decreases his rate of shooting, but inflicts a -1 penalty to the target’s Armour check.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Tree A",
+                "id": "a179-66f0-c709-3429",
+                "collective": false,
+                "hidden": false,
+                "modifiers": [
+                  {
+                    "field": "hidden",
+                    "type": "set",
+                    "value": true,
+                    "conditions": [
+                      {
+                        "childId": "4724-63f9-5fb6-8cdc",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "2a. Crippling Shot",
+                    "id": "3406-b943-e3c9-d468",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "d764-69c3-976a-c89a",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                    "rules": [
+                      {
+                        "name": "Crippling Shot",
+                        "id": "9ba2-fde5-114f-cc4d",
+                        "description": "Use: Action (Shoot)\nIf this shot wounds an enemy Hero, he will suffer a -1 penalty to your choice of Agility, Melee, or Ranged checks for the rest of the battle.",
+                        "hidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "name": "3a. Critical Shot",
+                    "id": "2e09-43db-0263-25c7",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "ac11-9351-f7c6-79e8",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                    "rules": [
+                      {
+                        "name": "Critical Shot",
+                        "id": "7527-20f9-4449-0586",
+                        "description": "Use: Special (Shoot)\nPrerequisite: Ranged +3 or higher\nIf this attack damages an enemy, it will inflict double the normal amount of Wounds.",
+                        "hidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "name": "4a. One Arrow, One Kill",
+                    "id": "6d9c-01ea-769c-dbb2",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "88df-1ab2-4d6e-022d",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                    "rules": [
+                      {
+                        "name": "One Arrow, One Kill",
+                        "id": "05b0-10db-5f15-2a50",
+                        "description": "Use: Special (Shoot)\nIf it damages an enemy, it will inflict triple the normal amount of Wounds.",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tree B",
+                "id": "3908-4c3e-b99b-5bfa",
+                "collective": false,
+                "hidden": false,
+                "modifiers": [
+                  {
+                    "field": "hidden",
+                    "type": "set",
+                    "value": true,
+                    "conditions": [
+                      {
+                        "childId": "4724-63f9-5fb6-8cdc",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "2b. Precision Shot",
+                    "id": "a9fb-be55-e1b3-17ad",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "d265-34b4-ef5b-69c5",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                    "rules": [
+                      {
+                        "name": "Precision Shot",
+                        "id": "52cd-7836-65ff-3b34",
+                        "description": "Use: Special (Shoot)\nThe Hero may shoot enemies locked in close combat, and he may freely target Heroes within a unit.",
+                        "hidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "name": "3b. Armour Cracker",
+                    "id": "4de6-3537-4e01-c241",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "c2cd-f0f4-83cb-41cb",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                    "rules": [
+                      {
+                        "name": "Armour Cracker",
+                        "id": "26ed-92b8-9d16-2da0",
+                        "description": "Use: Passive\nAll attacks made by this Hero’s bow inflict a -1 penalty to a target’s Armour checks, in addition to any other penalty other Talents might grant.",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beloved by Fate",
+            "id": "9b89-0f64-40cf-35d1",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Dicing with Fate",
+                "id": "7eac-7035-8a48-d80f",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "8705-316d-5404-79a7",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 3
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Dicing with Fate",
+                    "id": "2b68-273d-76d6-1c99",
+                    "description": "Use: Passive\nOnce per battle, a warband with this Hero on the battlefield can re-roll his Dice of Fate. This Talent may be selected up to three times. The Hero can re-roll his Dice of Fate once per battle for every time he has taken this Talent.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Fate's Companion",
+                "id": "5efb-aff8-c1be-72d9",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "6769-7de0-3538-9fcc",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Fate's Companion",
+                    "id": "5e43-9ba9-1244-8919",
+                    "description": "Use: Passive\nOnce per battle, after the Dice of Fate have been rolled, another dice can be rolled – this dice is hidden from the opposing player (place it under a cup), but the Hero’s player is free to see it. The Dice of Fate are not rolled in the next turn – instead, this dice is revealed in their place. On a 1-3, the opposing player has the first Phase of that turn; on a 4-6, the Hero’s player does.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Fate's Master",
+                "id": "2a7f-c118-5eec-abc6",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "8d9f-fd11-5884-2b18",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Fate's Master",
+                    "id": "4de4-01ab-288d-83e8",
+                    "description": "Use: Passive\nOnce per battle, after the Dice of Fate have been rolled, the Hero can declare them null and void, and instead choose which warband will take the first Phase of that turn.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Brawler",
+            "id": "6604-91b8-37ac-a1d4",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Dirty Fighting",
+                "id": "5061-b23c-92fa-b77c",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "0fc0-3299-dc78-dfd4",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Dirty Fighting",
+                    "id": "76e2-337d-6c7c-d6f1",
+                    "description": "Use: Action (Melee)\nIf the Hero causes damage against an enemy Hero with this attack, no damage is caused. Instead, the enemy and Hero make an opposed Bravery check. If the enemy fails this check, it suffers a Knockdown.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Piercing Thrust",
+                "id": "e24d-3d71-504e-fd72",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "4ee4-8631-379b-963c",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Piercing Thrust",
+                    "id": "9c9b-6e58-bfc2-83bb",
+                    "description": "Use: Action (Melee)\nIf successful, the target suffers a -1 penalty to any Armour check made against this attack.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Knockdown",
+                "id": "390c-6144-ceb9-3bd8",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "31fb-d5dc-58a1-c0f1",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Knockdown",
+                    "id": "4e8e-9a71-5041-f682",
+                    "description": "Use: Action (Melee)\nHe can only roll one Melee Dice for this attack and, if successful, no damage will be caused. Instead, the opponent suffers an automatic Knockdown.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Divine Prodigy",
+            "id": "bed8-1e2b-0cd9-f201",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Divine Luck",
+                "id": "df44-7a00-dc50-0829",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "97e0-600b-18da-647e",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 3
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Divine Luck",
+                    "id": "d9b1-4494-1229-50d1",
+                    "description": "Use: Passive\nThis Talent may be selected up to three times. The Hero gets one free re-roll per battle for every time he has taken this Talent, and this may be used for any dice roll he (but not a unit he leads) makes during the battle.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Blessed by Birth",
+                "id": "6d4e-5e9b-a551-d4fd",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "a942-0016-08d3-a842",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Blessed by Birth",
+                    "id": "2b7e-1f2c-3d45-35d5",
+                    "description": "Use: Passive\nThe Hero permanently raises any one characteristic including Armour by +1. This counts as the Hero’s\nnew starting characteristic, and so does not affect how much it can be increased by through experience and levels (see page 28-29). This Talent must be chosen when the Hero is purchased at 1st Level, and may not be selected thereafter.",
+                    "hidden": false
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Bonus",
+                    "id": "7fa7-b30e-6dcb-436c",
+                    "collective": false,
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "id": "bfc8-2e9c-e8b6-0af9",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Move",
+                        "id": "4c58-9556-6c12-171b",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Ranged",
+                        "id": "82b0-6124-2f8a-0f06",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Melee",
+                        "id": "2626-e981-94cc-b4bd",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Melee Dice",
+                        "id": "21ff-dd10-e440-82a9",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Agility",
+                        "id": "5d17-952e-662d-2612",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Bravery",
+                        "id": "682b-78e5-7f8c-c120",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Armour",
+                        "id": "fb6a-e1ba-34d3-9b39",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      },
+                      {
+                        "name": "Wounds",
+                        "id": "e2df-b0ae-2438-665b",
+                        "collective": false,
+                        "hidden": false,
+                        "type": "upgrade",
+                        "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fortress of Spears",
+            "id": "b17c-6438-7f7a-7ced",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. About Face!",
+                "id": "88b0-349e-05eb-26eb",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "6514-8f8c-609a-4f71",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "About Face!",
+                    "id": "8747-0b48-f6c2-d3ef",
+                    "description": "Use: Action (Move)\nWith sharp orders and well-practised drilling, the Hero’s unit moves with one mind. So long as the unit is not locked in close combat every model in the unit may be turned to face a new direction. Every model must be turned to face the same direction and will not move any further with this action. The Phalanx will not count as broken because of this movement for the rest of the Turn, even if it has less than five models in its ranks. After the turn is complete, the unit must obey the normal rules for forming a Phalanx or the Phalanx\nwill be broken.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Push Back",
+                "id": "b0c4-ee4c-bd5e-5be4",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "c99f-fc97-84d3-c677",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Push Back",
+                    "id": "fe9c-cffe-ce3a-f9cb",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +2 or higher\nThe Hero makes an opposed Bravery check with an enemy unit he is in close combat with, and both sides add +1 for every five models they have involved in the combat. If successful, the Hero drives the enemy unit back 1\". He, and his unit, immediately follow up to remain in contact. Close combat is then resolved but enemies who have been pushed back in this way may not use shields during the Melee action.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Fight in the Shade",
+                "id": "6487-fc3f-f0c1-7ab5",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "5960-4c9f-1afe-c330",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Fight in the Shade",
+                    "id": "cb50-81cc-cc2d-0c5e",
+                    "description": "Use: Action (Special)\nUntil the unit performs a new action, it will be able to re-roll all Armour checks made against shooting attacks. However, if it is engaged in close combat before it performs a new action, it will suffer a -2 penalty to Melee checks for the first Melee action performed against it, and will automatically lose the benefits of the\nPhalanx rule.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "4. As One!",
+                "id": "47be-b126-37c7-4d47",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "755c-7d97-6f43-6f3b",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "As One!",
+                    "id": "1204-f324-8c3b-1312",
+                    "description": "Use: Passive\nThe Hero and his unit have learned to act as one and can rapidly rotate the entire Phalanx to face a new\nthreat. Once per game, the Hero may use the About Face! Talent immediately after an enemy unit completes an action with 12\", without performing an action himself.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "God of Battle",
+            "id": "1bf6-9c50-9d0f-e44d",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Mighty Blow",
+                "id": "ccae-1909-114f-1052",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "0557-dcca-6e8b-7d0e",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Mighty Blow",
+                    "id": "c14f-f2c9-634c-4350",
+                    "description": "Use: Action (Melee)\nPrerequisite: Melee +2 or higher\nThe Hero puts extra weight and effort behind a single strike. He can only roll one Melee Dice for this attack but, if it hits, the blow will triple the number of Wounds caused. If the target is a Hero, it must also succeed at an Agility check or suffer a Knockdown.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Horse Worrier",
+                "id": "c504-8de7-e1a3-7a63",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "b6a0-74f3-ded3-cc63",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Horse Worrier",
+                    "id": "f4f1-e4b5-16a9-9949",
+                    "description": "Use: Passive\nPrerequisite: Bravery +4 or higher\nA Cavalry unit wanting to charge the Hero or his unit must first make an opposed Bravery check. If the Hero\nwins this check, the Cavalry unit may not charge and must instead select a Move action (if the unit has another action in this Phase, it is free to make another attempt in that action). Even if the Cavalry unit succeeds in the Bravery check, it suffers a -1 penalty to its Melee checks during the action. \nCavalry units that do not have horses or ponies (such as those with elephants or camels) may re-roll their Bravery check.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Decapitation",
+                "id": "27c1-8660-c110-aa30",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "ae12-7d42-5bf7-eb66",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Decapitation",
+                    "id": "b1f5-1719-6c67-21fe",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +4 or higher \nHe may only roll one Melee Dice but if he rolls a natural 6 (before any modifiers), the enemy is instantly\nremoved from the battlefield, regardless of armour or remaining Wounds. When checking for injuries in a campaign, the enemy model is automatically dead. \nThis Talent may only be used if the Hero is armed with a Sword, Axe, or Great Axe.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hail of Stones",
+            "id": "fc9b-6a4b-8ba8-596d",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Accurate",
+                "id": "a94d-7fae-5a91-2a33",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "d617-0bf4-944f-5a3d",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Accurate",
+                    "id": "466e-702e-a016-da7d",
+                    "description": "Use: Action (Shoot)\nPrerequisite: Ranged +2 or higher\nThe Hero may re-roll any Ranged check that misses.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Head Shot",
+                "id": "11a9-ccd9-537f-e94f",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "b090-6fad-426d-a102",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Head Shot",
+                    "id": "57c5-6e0f-a56d-9115",
+                    "description": "Use: Special (Shoot)\nIf this attack is successful, any Parry from a Shield is ignored. In addition, if the enemy loses any Wounds from this attack and is a Hero, it must make a Bravery check. If failed, it also suffers a Knockdown.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Sling of Fire",
+                "id": "e93b-1b22-e9f7-c487",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "a725-2396-1f3c-ebdf",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Sling of Fire",
+                    "id": "3739-364a-d29f-fe3d",
+                    "description": "Use: Action (Shoot)\nThe Hero ignores the Slow rule for his sling in this Phase.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hammer to Anvil",
+            "id": "fd01-be9d-d1fe-d2bc",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Careless Charge",
+                "id": "a07e-754e-c4f4-7e71",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "f301-7601-ca08-bc03",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Careless Charge",
+                    "id": "b9b3-43ac-bf3b-1c31",
+                    "description": "Use: Action (Melee)\nThe Hero and his unit charge forth with wild abandon, and may double their Move characteristic for a single Melee action to reach an enemy unit. However, the unit being charged can perform an immediate and free Shoot action against the Hero and his unit.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Thundering Charge",
+                "id": "1394-43c5-a728-1314",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "ca99-e962-9aa4-407d",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Thundering Charge",
+                    "id": "6c53-248f-e3a5-331e",
+                    "description": "Use: Action (Melee)\nWhen the Hero charges in a Melee action to first enter close combat, he gains an extra Melee Dice, but also suffers a -1 penalty to his Melee checks.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Blood Drunk",
+                "id": "41a8-e96d-8636-c206",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "55a4-6464-811a-5703",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Blood Drunk",
+                    "id": "948f-f6fb-2611-d2ad",
+                    "description": "Use: Passive\nIf the Hero loses a Wound or is in Line of Sight to a friendly Hero who is removed as a casualty, he enters a terrible berserk fury that allows him to unleash his full madness upon the battlefield. A Blood Drunk Hero doubles his Melee Dice and gains a bonus Wound for the duration of the battle. However, he may not use a Parry under any circumstances and may only perform Melee and Move actions, which must move him as close as possible to the nearest enemy.\nThe Hero may try to stop the Blood Drunk fury at the start of his Phase by attempting a Bravery check. If he fails the check, he is no longer Blood Drunk. Alternatively, if at least three friendly models are in base contact with the Hero (they need not be in the same unit), they may perform two Special actions to restrain him. In this case, the Hero remains Blood Drunk but is not moved at all.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hands of a Healer",
+            "id": "7db6-8a1f-db85-40a8",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Healing Hands",
+                "id": "f686-6902-8315-5428",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "0494-6178-5430-9246",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Healing Hands",
+                    "id": "c09b-a611-bc19-6591",
+                    "description": "Use: Campaign\nBetween battles, the Hero can heal one injury on any Hero except himself. This will negate one characteristic penalty that has resulted from injury. For example, if another Hero sustained a crippling injury to the legs, then using Healing Hands would allow him to remove the penalty to his Move characteristic.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Medicus",
+                "id": "dde7-1989-5f37-d488",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "0363-9c7b-9736-bfbd",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Medicus",
+                    "id": "bc9a-6c1f-3fe6-ec90",
+                    "description": "Use: Campaign\nBetween battles, the Hero can heal injuries on any Hero except himself. He may now negate two characteristic penalties that have resulted from injury. These penalties may be on the same or different Heroes.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Physician",
+                "id": "7cb8-fd4f-a6dd-82a0",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "8391-4858-6923-5530",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Physician",
+                    "id": "176c-9aaa-b3ad-6a1e",
+                    "description": "Use: Campaign\nBetween battles, the Hero can heal injuries on any Hero except himself. He may now negate three characteristic penalties that have resulted from injury. These penalties may be on the same or different Heroes.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Horselord",
+            "id": "9605-8946-08a2-c6e9",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Buckle the Line",
+                "id": "2e22-fc52-814b-fd0e",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "6952-d7a8-bc9f-1a84",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Buckle the Line",
+                    "id": "05b2-f7b7-d1b2-2d4f",
+                    "description": "Use: Action (Melee)\nThe enemy unit must make a Bravery check and, if failed, will suffer a -1 penalty to their Melee checks for this action. If the enemy is using the Phalanx rule, it will lose all benefits of it.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Horsemanship",
+                "id": "693b-f3f3-d54f-1a56",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "56c1-dac3-bfb3-0c2d",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Horsemanship",
+                    "id": "96f2-4c26-cc53-a67f",
+                    "description": "Use: Passive\nThe Hero and any unit he is leading may double their Move score for one action in every Phase as normal. However, if they pass a Bravery check, they may double their Move score for a second action in the same Phase.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Cantabrian Circle",
+                "id": "497c-830c-26a6-aa83",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "4a6a-ef3c-cdcf-08bd",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Cantabrian Circle",
+                    "id": "f997-8d5e-d279-f84c",
+                    "description": "Use: Special (Shoot)\nOnce activated, this Talent allows the Hero and his unit to make two shooting attacks with a single Shoot action. In addition, until the start of the unit’s next Phase, all ranged attacks made against them suffer a -1 penalty to Ranged checks.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3a. Galloping Thunder",
+                "id": "24c8-a630-47f8-949a",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "7405-a3ab-a0aa-7b9a",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Galloping Thunder",
+                    "id": "91ea-38d8-773f-b914",
+                    "description": "Use: Action (Melee)\nIf the Hero’s unit gains the benefit of charging into close combat, the enemy unit being charged suffers a -1 penalty to its Melee checks during this action.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3b. Parthian Shot",
+                "id": "230f-d1d5-8fd3-031e",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "2e5f-ab20-ce63-7901",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Parthian Shot",
+                    "id": "c8ac-b3e7-f8cd-0cb1",
+                    "description": "Use: Action (Shoot)\nWhen this Talent is activated, the Hero and any unit he is leading perform their Shoot action and can then perform a free Move action.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Leader of Men",
+            "id": "0656-8d5b-eb12-d7d3",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Voice of Command",
+                "id": "7a53-42a1-d1a3-74a2",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "e943-50b9-80ea-2880",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Voice of Command",
+                    "id": "8ca1-fd82-e7c9-26a2",
+                    "description": "Use: Passive\nEvery friendly unit within 6\" of the Hero gains a +1 bonus to all Bravery checks. This does not include the Hero himself.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Loyal Bodyguard",
+                "id": "fd58-ef17-45fa-54a5",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "008a-33a9-745b-f593",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Loyal Bodyguard",
+                    "id": "550a-1bb6-751a-223b",
+                    "description": "Use: Passive\nSelect one Hero in the warband of the same or lower level as this Hero. This model has grown an undying\nloyalty to his leader and will gladly sacrifice himself if it means the Hero will go on to greater things. So long as this model is within 1\" of the Hero, any attack aimed at the Hero may instead be directed toward the loyal bodyguard.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Motivation",
+                "id": "cefa-372f-4a57-73a0",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "882e-a098-ebae-3663",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Motivation",
+                    "id": "630c-58de-2404-a058",
+                    "description": "Use: Action (Special)\nPrerequisite: Bravery +2 or higher \nWith this Talent, the Hero may choose any unit of Minions within 12\" that has not yet acted in this Phase. That unit may perform three actions in this Phase, rather than two.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "4a. Inspire and Elevate",
+                "id": "398d-827d-41c2-142b",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "ae47-a472-4219-86bf",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Inspire and Elevate",
+                    "id": "00d7-03d0-7c7a-9e51",
+                    "description": "Use: Campaign\nAfter a battle in which the Hero’s warband gained victory, choose one Minion in the force who also survived and did not fail a Will to Fight check. The warband spends 25 Denarii and then this Minion makes a Bravery check with no modifiers of any sort applied. If it succeeds, he is immediately made into a Level 1 Hero.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "4b. Battlefield Control",
+                "id": "8cff-cedd-99a8-539c",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "2939-a452-808e-009b",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Battlefield Control",
+                    "id": "764f-ea92-7b8b-60e9",
+                    "description": "Use: Passive\nA warband with this Hero in it is never forced to take Will to Fight checks. Instead, all units may voluntarily fail a Will to Fight check (and thus retreat from the fight) at any time after 25% of more casualties have been taken (rounding down). Alternatively, Will to Fight checks can be ignored altogether, with the warband fighting to the last man if necessary! As soon as the Hero is removed as a casualty, however, Will to Fight checks are taken as normal.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Natural Hero",
+            "id": "82e1-6017-25c3-22d1",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Inspire",
+                "id": "6b9b-477a-d5c2-7021",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "d5c9-cc2e-5156-aaf9",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Inspire",
+                    "id": "6279-5756-948d-54ce",
+                    "description": "Use: Passive\nEvery friendly unit within 12\" may re-roll all Will to Fight checks.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Heroic Rush",
+                "id": "7508-4a31-69b4-40da",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "223c-760e-6d9d-0774",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Heroic Rush",
+                    "id": "6982-8dd2-0362-986a",
+                    "description": "Use: Passive\nOnce per battle, the Hero may take three actions in his Phase instead of two.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Die Hard",
+                "id": "df17-a931-072a-4768",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "c727-dfd9-6cc6-0373",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Die Hard",
+                    "id": "df0c-8166-a740-e12f",
+                    "description": "Use: Passive\nIf the Hero is reduced to 0 Wounds, make a Bravery check immediately. If failed, he is removed as normal. If successful, the Hero immediately regains one Wound and may continue fighting. The Hero must continue to make successful Bravery checks at the start of each of his Phases in order to continue fighting. Failure will result in him being removed from the table as a casualty. If the Hero suffers more damage and loses another Wound while benefiting from Die Hard, he is automatically removed from the table as a casualty.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "4. Die Harder",
+                "id": "f536-a013-ce2a-43e7",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "31dc-8e5f-1e99-d2cc",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Die Harder",
+                    "id": "fd68-bcd5-2cf4-db66",
+                    "description": "Use: Passive\nPrerequisite: Bravery +4 or higher\nIf the Hero takes damage and loses a Wound while benefiting from Die Hard, having already been reduced to 0 Wounds previously, he makes an additional Bravery check immediately. If failed, he is removed as normal. If successful, the Hero immediately regains one Wounds and may continue fighting. The Hero must continue to make successful Bravery checks at the start of each of his Phases in order to continue fighting. Failure will result in him being removed from the table as a casualty. If he suffers further damage while benefiting from Die Harder, additional Bravery checks will need to be made to be able to continue fighting.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shield Master",
+            "id": "2f4f-d34f-c2b1-872a",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Shield Bash",
+                "id": "140c-6c3f-3024-eafb",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "d7f8-a569-391e-b43b",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Shield Bash",
+                    "id": "9dcc-3b8a-dc21-daf0",
+                    "description": "Use: Action (Melee)\nIf the attack hits and the target fails its Armour check, it will lose one Wound from a Buckler or Small Shield and two Wounds from a Large Shield. In addition, the target must succeed at an Agility check or suffer a Knockdown, even if no damage was caused. This attack uses the Smasher rule and so cannot be Parried.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Shield Wall",
+                "id": "4775-987c-d5e1-ab98",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "eba6-37a9-a511-7cbb",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Shield Wall",
+                    "id": "d46f-c323-3e3d-008c",
+                    "description": "Use: Action (Melee)\nThe Hero’s shield becomes as a fortress, adding a +1 bonus to Armour checks against close combat attacks. However, the Hero suffers a -1 penalty to his Melee checks until the start of his next Phase.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Shield of Steel",
+                "id": "2ea7-6f1a-7858-a0d6",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "e8b4-db9d-775c-379a",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Shield of Steel",
+                    "id": "8d3e-1b8e-9db7-1fb7",
+                    "description": "Use: Special (Move)\nUntil the end of the Hero’s next Phase, his shield grants an additional Parry against ranged attacks.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Son of Chionis",
+            "id": "22f2-aac5-b77b-0267",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Light Foot",
+                "id": "5a05-cbd8-ddbf-f88b",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "2e63-c1cb-16d7-24c3",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Light Foot",
+                    "id": "387e-d5d8-36a6-1fb6",
+                    "description": "Use: Action (Move)\nDuring a Move action, the Hero can make an Agility check to jump over any obstacle up to 1\" high without any Move penalty. If the Agility check is failed, the Hero will only move half of his Move score as normal for difficult terrain, stopping at the obstacle if he has already exceeded this distance.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Quick Dodge",
+                "id": "3659-4a3d-44b8-f1a3",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "f370-bb50-f299-033e",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Quick Dodge",
+                    "id": "dade-ab16-b34a-ef64",
+                    "description": "Use: Passive\nIf the Hero is not in cover, ranged attacks made against him suffer a -1 penalty to their checks.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Well-Planted",
+                "id": "0510-225b-6cd4-db8d",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "cf7a-0536-606b-55d2",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Well-Planted",
+                    "id": "c370-f5a5-7c78-ec59",
+                    "description": "Use: Passive\nWhenever the Hero suffers a Knockdown, he may make an immediate Agility check. If successful, he ignores the Knockdown and remains standing.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2c. Back at Ya!",
+                "id": "291e-db56-ae43-c393",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "b751-fe6a-2529-22f4",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Back at Ya!",
+                    "id": "7068-1215-8fb8-0b53",
+                    "description": "Use: Passive\nPrerequisite: Agility +1 or higher \nOnce per Turn, if the Hero is attacked by a thrown javelin he may throw it back if he passes an Agility check. This is treated as an immediate and free Shoot action.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sword of Vengeance",
+            "id": "aa8c-3592-c188-7a7c",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Wall of Iron",
+                "id": "3594-5ca7-900d-95ed",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "760d-667e-0a80-e647",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Wall of Iron",
+                    "id": "82a2-78da-0e48-6f2e",
+                    "description": "Use: Passive\nPrerequisite:Melee +1 or higher\nThe hero gains an extra Parry with his sword.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2a. Now You See Me...",
+                "id": "ea79-b065-039e-5f4e",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "cf7a-7374-be43-72ff",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Now You See Me...",
+                    "id": "a9f2-6d71-e1fa-d57d",
+                    "description": "Use: Action (Move)\nWhen using this Talent, the Hero makes an opposed Agility check with the enemy unit he is fighting. If he succeeds, he may flee from close combat without the enemy getting a chance to attack him. If he fails, he uses the rules for fleeing from combat as usual.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2b. Lethal Blade",
+                "id": "0b1a-8c43-2270-390a",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "6ca0-08ee-785c-3226",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "infoLinks": [{"name": "Lethal", "id": "3963-232a-f48d-a4c0", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"}],
+                "rules": [{"name": "Lethal Blade", "id": "e417-373c-3ac1-4d33", "description": "Use: Passive\nThe Hero’s sword gains the Lethal 2 rule.", "hidden": false}]
+              },
+              {
+                "name": "2c. Darting Blade",
+                "id": "f4ec-583c-9099-4cf9",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "b9f8-268e-1634-fb64",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Darting Blade",
+                    "id": "eb91-1c57-df74-b144",
+                    "description": "Use: Passive\nIf the Hero kills an enemy in close combat, he may immediately perform a free Melee action. This Talent may only be used once per Turn.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3a. Web of Death",
+                "id": "883b-3f8e-4df4-7593",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "f6f5-6c21-ed60-555f",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Web of Death",
+                    "id": "ab0b-dadb-b21c-630a",
+                    "description": "Use: Action (Melee)\nThe Hero makes no attacks but any enemy wishing to perform a Melee action against the Hero in their next Phase must first succeed in an opposed Bravery check with the Hero. This Talent will not work if the Hero is\nleading a unit, as there is not enough space to perform the Web of Death, except in a Challenge.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3b. Blademaster",
+                "id": "a46c-e9d4-63f9-f281",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "94ee-b61c-9977-f842",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "infoLinks": [
+                  {"name": "Lethal", "id": "1d0d-1b55-12d6-18e3", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"},
+                  {"name": "Smasher", "id": "8d57-ccad-87e8-019f", "hidden": false, "targetId": "9994-6c6c-bcfc-abc6", "type": "rule"}
+                ],
+                "rules": [
+                  {
+                    "name": "Blademaster",
+                    "id": "2556-d02d-ad15-7f68",
+                    "description": "Use: Passive\nPrerequisite:Melee +4 or higher\nHis sword gains the Lethal 3 and Smasher rules.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3c. Numbers Count for Nothing",
+                "id": "6bf7-8c39-56dd-8ee1",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "753f-1644-b5c2-6c8a",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Numbers Count for Nothing",
+                    "id": "0c50-5ef9-5003-55bf",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +4 or higher\nEnemy units in close combat with this Hero or a unit he is leading gain no bonus to their Melee checks for\nhaving ten or more models.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Titan of Battle",
+            "id": "bbb1-67fc-8fbc-51ef",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Hammer of the Gods",
+                "id": "fba1-a6ef-5e93-d6e7",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "c1da-1bca-505f-a96d",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "infoLinks": [{"name": "Lethal", "id": "3ba8-7b7d-f3f6-2538", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"}],
+                "rules": [
+                  {
+                    "name": "Hammer of the Gods",
+                    "id": "1487-fca0-e151-74d2",
+                    "description": "Use: Passive\nPrerequisite:Melee +2 or higher\nWhen using a Smasher weapon, this Hero gains a +1 bonus to the Lethal special rule (so Lethal 2 will become Lethal 3).",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Mightiest Swing",
+                "id": "cfdd-103d-1bc6-d1e6",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "7069-2214-825b-0512",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Mightiest Swing",
+                    "id": "1671-c217-f9f0-2dc8",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +3 or higher\nThe Hero rolls a number of Melee Dice equal to the number of enemy models within 1\" of him. Any models that survive this attack will suffer an automatic Knockdown.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Mightiest Blow",
+                "id": "6e5e-3780-ec50-f2d0",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "5096-78c5-f235-0173",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "infoLinks": [{"name": "Lethal", "id": "599c-64db-c923-17a8", "hidden": false, "targetId": "cc1c-7236-9ec8-f0d3", "type": "rule"}],
+                "rules": [
+                  {
+                    "name": "Mightiest Blow",
+                    "id": "aaf9-d90e-4794-2211",
+                    "description": "Use: Special (Melee)\nPrerequisite:Melee +4 or higher\nThe Hero rolls only a single Melee Dice, but his weapon gains the Lethal 6 special rule.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Twin Blades of Hades",
+            "id": "f054-eb9b-374e-f383",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. Rain of Blades",
+                "id": "22ce-aea8-c3a2-230d",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "3b9c-475f-4803-6674",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Rain of Blades",
+                    "id": "95c1-bd40-da53-8bf0",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +2 or higher\nWhen using the Dual Weapon Fighting rules (see page 17), this Hero gains two bonus Melee Dice rather than just one.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Storm of Blades",
+                "id": "3d7b-1a7d-5928-80a0",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "3300-3972-22d5-3bf6",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Storm of Blades",
+                    "id": "1087-bd43-1e34-ece5",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +3 or higher\nWhen using the Dual Weapon Fighting rules (see page 17), this Hero doubles his Melee Dice rather than just\ngaining a bonus dice.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "3. Hurricane of Blades",
+                "id": "94a0-c131-615a-b3d4",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "424b-486b-234b-8cb5",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Hurricane of Blades",
+                    "id": "6b88-04b4-ef3b-3a81",
+                    "description": "Use: Action (Melee)\nPrerequisite:Melee +4 or higher\nWhen using the Dual Weapon Fighting rules (see page 17), this Hero doubles his Melee Dice rather than just gaining a bonus dice, and can also Parry every close combat attack made against him.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Voice of a God",
+            "id": "abad-22ae-f9b9-d31a",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "1. War Cry",
+                "id": "a0e6-7367-769c-0eef",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "16ba-e4d6-89a9-e241",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "War Cry",
+                    "id": "e70b-a0fe-62af-3e04",
+                    "description": "Use: Action (Melee)\nPrerequisite: Bravery +3 or higher\nWhen the Hero’s unit benefits from a charge (see page 17), the enemy unit being attacked suffers a -1 penalty to its Melee checks for that Melee action.",
+                    "hidden": false
+                  }
+                ]
+              },
+              {
+                "name": "2. Demoralize",
+                "id": "b98c-7e1d-0139-61ad",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "4883-3e8d-33c9-8228",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "Denarii", "typeId": "5c36-dd73-6e2a-860d", "value": 0}],
+                "rules": [
+                  {
+                    "name": "Demoralize",
+                    "id": "5c14-b6d8-977d-d9d8",
+                    "description": "Use: Action (Melee)\nPrerequisite: Bravery +4 or higher\nAny enemy unit outnumbered by the Hero and his unit that is charged must succeed in a Bravery check or\nimmediately perform a Move action away from the Hero. This will count as fleeing from close combat (see page 13). Enemy Heroes or units led by Heroes are immune to this Talent.",
+                    "hidden": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
